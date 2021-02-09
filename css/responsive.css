@@ -2,11 +2,11 @@
 
 /* Zoom to make it look better, in very very small devices */
 /* less than or equal to given pixel */
-@media only screen and (max-width: 380px){
-  /* .contents,
+@media only screen and (max-width: 351px){
+  .contents,
   .dashboard{
-    zoom: 100%;
-  }   */
+    zoom: 90%;
+  }  
 }
 
 
@@ -85,7 +85,7 @@
 
 /* Show only icons on links (Mobile view) */
 /* within specific range (469 to 649) */
-@media only screen and (max-width: 649px) 
+@media only screen and (max-width: 603px) 
 and (min-width: 469px) {
   .glass{    
     min-height: 100vh;
@@ -143,6 +143,188 @@ and (min-width: 469px) {
 
   .more-button, .back-button{
     margin: 5px 0 15px 0;
+  }
+}
+
+
+/* Adjust User position */
+/* within specific range (603 to 649) */
+@media only screen and (max-width: 620px)
+and (min-width: 603px) {
+  .glass{ 
+    min-height: 100vh;
+  }
+
+  .dashboard{
+    display: flex;
+    justify-content: space-between;
+    height: 6.3rem;
+  }
+
+  .user img{
+    margin: .5rem 0 0 15px;    
+  }
+  .user h3{
+    margin: -5px 0 0 14px;
+    font-size: 13px;
+    text-transform: uppercase;
+    color: var(--h2-color);
+  }
+  .user p{
+    display: none;
+    overflow: hidden;
+  }
+
+  .link{
+    padding: 1rem 0 1rem 1.0rem;
+  }
+  
+  .links{
+    display: flex;
+    justify-content: space-between;
+  }
+  .links .contactlink{
+    position: absolute;
+    right: 8px;
+    flex-grow: 1;
+  }
+
+  .links .link i{
+    visibility: hidden;
+    display: none;
+  }
+  .links .link h2{
+    color: var(--responsive-link-color);
+    font-size: 19px;    
+  }
+  .links .link h2:hover{
+    color: black;
+    
+  }
+
+  .languages {
+    display: none;  
+    visibility: hidden; 
+    overflow: hidden; 
+  }
+
+  .contents{
+    margin: 1rem 2rem 0 2rem;
+  }
+
+  .more-button, .back-button{
+    margin: 5px 0 15px 0;
+  }  
+
+}
+
+/* Adjust User position more */
+/* within specific range (603 to 649) */
+@media only screen and (max-width: 649px)
+and (min-width: 621px) {
+  .glass{ 
+    min-height: 100vh;
+  }
+
+  .dashboard{
+    display: flex;
+    justify-content: space-between;
+    height: 6.3rem;
+  }
+
+  .user img{
+    margin: 7px 0 0 2.3rem;
+  }
+  .user h3{
+    margin: -5px 0 0 9px;
+    font-size: 12px;
+    text-transform: uppercase;
+    color: var(--h2-color);
+  }
+  .user p{
+    margin: -5px 0 0 1.3rem;
+    visibility: visible;
+  }
+
+  .link{
+    padding: 1rem 0 1rem 1.0rem;
+  }
+  
+  .links{
+    display: flex;
+    justify-content: space-between;
+  }
+  .links .contactlink{
+    position: absolute;
+    right: 8px;
+    flex-grow: 1;
+  }
+
+  .links .link i{
+    visibility: hidden;
+    display: none;
+  }
+  .links .link h2{
+    color: var(--responsive-link-color);
+    font-size: 19px;    
+  }
+  .links .link h2:hover{
+    color: black;
+    
+  }
+
+  .languages {
+    display: none;  
+    visibility: hidden; 
+    overflow: hidden; 
+  }
+
+  .contents{
+    margin: 1rem 2rem 0 2rem;
+  }
+
+  .more-button, .back-button{
+    margin: 5px 0 15px 0;
+  }  
+
+}
+
+
+/* Adjust User position more, wrt Zooming height for different platform */
+/* within specific range (621 to 649)width and greater than 769height */
+@media only screen and (max-width: 649px)
+and (min-width: 621px) 
+and (min-height: 769px) {
+  .user img{
+    margin: 7px 0 0 10px;
+  }
+  .user h3{
+    margin: -5px 0 0 9px;
+    font-size: 13px;
+    text-transform: uppercase;
+    color: var(--h2-color);
+  }
+  .user p{
+    display: none;
+    overflow: hidden;
+  }
+}
+/* within specific range (649 to 690)width and greater than 769height */
+@media only screen and (max-width: 690px)
+and (min-width: 649px) 
+and (min-height: 769px) {
+  .user img{
+    margin: 7px 0 0 10px !important;
+  }
+  .user h3{
+    margin: -5px 0 0 9px;
+    font-size: 13px;
+    text-transform: uppercase;
+    color: var(--h2-color);
+  }
+  .user p{
+    display: none;
+    overflow: hidden;
   }
 }
 
@@ -218,30 +400,11 @@ and (min-width: 649px) {
 
 }
 
-/* Adjust User position */
-/* within specific range (649 to 690) */
-@media only screen and (max-width: 690px)
-and (min-width: 649px) {
-  .user img{
-    margin: .5rem 0 0 10px;    
-  }
-  .user h3{
-    margin: -5px 0 0 9px;
-    font-size: 12px;
-    text-transform: uppercase;
-    color: var(--h2-color);
-  }
-  .user p{
-    display: none;
-  }
-}
-
 
 /* Dashboard on top */
-/* within specific range (796 to 855) */
-/* @media only screen and (max-width: 855px) */
+/* within specific range (795 to 1066) */
 @media only screen and (max-width: 1066px)
-and (min-width: 796px) {
+and (min-width: 795px) {
 
   .glass{ 
     min-height: 100vh;
@@ -377,7 +540,6 @@ and (min-width: 796px) {
 
 /* Hide it height wise also*/
 /* less than or equal to given pixel */
-/* @media only screen and (max-height: 698px){ */
 @media only screen and (max-height: 635px){
   .circle1, .circle2{
     visibility: hidden;
