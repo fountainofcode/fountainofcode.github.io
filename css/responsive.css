@@ -309,8 +309,8 @@ and (min-height: 769px) {
     overflow: hidden;
   }
 }
-/* within specific range (649 to 690)width and greater than 769height */
-@media only screen and (max-width: 690px)
+/* within specific range (649 to 691)width and greater than 769height */
+@media only screen and (max-width: 691px)
 and (min-width: 649px) 
 and (min-height: 769px) {
   .user img{
