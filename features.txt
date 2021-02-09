@@ -1,0 +1,9 @@
+Features included:
+------------------
+- glass view
+- pagination
+- responsive
+
+Tech used:
+----------
+HTML, CSS, JavaScript, Vuejs 3

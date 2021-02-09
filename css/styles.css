@@ -1,0 +1,251 @@
+@import url(./indexButtons.css);
+@import url(./contact.css);
+@import url(./responsive.css);
+
+:root{
+  --main-gradient-right-color: rgb(43, 166, 197);
+  --main-gradient-bottom-color: rgb(78, 1, 78);
+  --glass-gradient-right-color: rgba(255, 255, 255, 0.5);
+  --glass-gradient-bottom-color: rgba(255, 255, 255, 0.25);
+  --circle-gradient-right-color: rgba(255, 255, 255, 0.8);
+  --circle-gradient-bottom-color: rgba(255, 255, 255, 0.3);
+  --card-gradient-right-color: rgba(255, 255, 255, 0.8);
+  --card-gradient-bottom-color: rgba(255, 255, 255, 0.5);
+  --text-color: white;
+  --h1-color: rgb(39, 38, 38);
+  --h2-color: rgb(83, 82, 82);
+  --h2-card-color:rgb(49, 48, 48); 
+  --cardtext-gradient-right-color: var(--h2-color);
+  --cardtext-gradient-bottom-color: var(--h2-color);
+  --button-gradient-right-color: rgba(255, 255, 255, 0.7);
+  --button-gradient-bottom-color: rgba(255, 255, 255, 0.3);
+  
+  --responsive-link-color: rgb(63, 61, 61);
+}
+
+html{
+  font-family: 'Poppins', sans-serif;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+h1{
+  color: var(--h1-color);
+  font-weight: 600;
+  font-size: 2rem;
+  opacity: 0.8;
+}
+
+h2, li, h4 {
+  color: var(--h2-color);
+  font-weight: 600;
+  opacity: 0.8;  
+}
+
+h3{
+  color: var(--h1-color);
+  font-weight: 600;
+  opacity: 0.8;
+}
+
+main {
+  min-height: 100vh;
+  background: linear-gradient(to right bottom,
+    var(--main-gradient-right-color),
+    var(--main-gradient-bottom-color)
+  );
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.glass {
+  /* height: 90vh; responsive taken */
+  /* width: 75%; responsive taken */
+  background: linear-gradient(to right bottom,
+    var(--glass-gradient-right-color),
+    var(--glass-gradient-bottom-color)
+  );
+  /* border-radius: 2rem; responsive taken */
+  z-index: 2;
+  
+  backdrop-filter: blur(1rem);
+  backdrop-filter: -moz-blur(1rem);
+  backdrop-filter: -webkit-blur(1rem);
+  
+  /* display: grid; responsive taken
+  grid-template-columns: 1fr 3fr; */
+}
+
+.circle1,
+.circle2{
+  /* responsive taken */
+  /* background: white; */  
+  background: linear-gradient(to right bottom,
+    var(--circle-gradient-right-color),
+    var(--circle-gradient-bottom-color)
+  );
+  
+  height: 17rem;
+  width: 17rem;
+  border-radius: 50%;
+  position: absolute;
+}
+
+.circle1{
+  top: 1%;
+  right: 2%;
+}
+
+.circle2{
+  bottom: 1%;
+  left: 2%;
+}
+
+
+.user img{
+  /* margin: 1rem 0; responsive taken */
+  border-radius: 50%;
+  height: 50px;
+  width: 50px;
+}
+
+.dashboard{
+  /* display: flex; responsive taken
+  flex-direction: column; 
+  align-items: center;
+  justify-content: space-evenly;
+  text-align: center; */
+  
+  background: linear-gradient(to right bottom,
+    var(--glass-gradient-right-color),
+    var(--glass-gradient-bottom-color)
+  );
+  /* border-radius: 2rem; responsive taken */
+}
+
+.dashboard .user p{
+  color: var(--h2-card-color);
+  font-weight: 600;
+  opacity: 0.8;
+}
+
+.link{
+  /* display: flex; responsive taken */
+  margin: 1rem 0rem;
+  /* padding: 1rem 2rem; responsive taken */
+  align-items: center;
+  cursor: pointer;
+}
+
+/* .link h2{ responsive taken
+  padding: 0rem 1rem; 
+} */
+
+.link .fa{
+  color: var(--main-gradient-bottom-color);
+  margin-right: 10px;
+}
+
+.link:hover i,
+.link:hover h2{
+  color: black;  
+}
+
+
+.languages{
+  /* background: linear-gradient(to right bottom,
+    var(--main-gradient-right-color),
+    var(--main-gradient-bottom-color)
+  ); responsive taken */
+  border-radius: 2rem;
+  color: var(--text-color);
+  /* padding: 1rem; responsive taken */
+  align-items: center;
+
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  justify-items: center;
+  
+  /* margin: 1rem 1rem; responsive taken */
+}
+
+.languages p{ /*responsive uses this*/
+  color: var(--text-color);
+  font-weight: 600;
+}
+
+
+.languages img{
+  height: 50px;
+  width: 45px;
+  transform: rotate(10deg);
+  border-radius: 3px;
+}
+
+.contents{
+  /* margin: 2rem; responsive taken */
+  display:flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+}
+
+.card{
+  background: linear-gradient(to right bottom,
+    var(--card-gradient-right-color),
+    var(--card-gradient-bottom-color)
+  );
+  border-radius: 1rem;
+  margin: 1rem 0rem;
+  padding: 1rem;
+  box-shadow: 6px 6px 20px rgba(122, 122, 122, 0.2);
+
+  display: grid;
+  grid-template-columns: 1fr 13fr;
+  grid-gap: 1rem;
+}
+
+.cardimage{
+  height: 50px;
+  width: 50px;
+  border-radius: 7px;  
+  
+}
+
+h4{
+  margin-bottom: 7px;
+}
+
+.card-info{
+  margin-top: -4px;
+}
+
+/* gradient color in the text also */
+/* .card p, ul li {
+  background: linear-gradient(to right bottom,
+    var(--cardtext-gradient-right-color),
+    var(--cardtext-gradient-bottom-color)
+  );
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+} */
+
+ul li{
+  list-style-type: none;
+}
+
+.cards .card .card-info ul li p{
+  color: var(--h2-card-color);
+  font-weight: 600;
+  opacity: 0.8;
+}
+
+.buttonsAtlast{
+  display: flex;
+  justify-content: space-between;
+}
+

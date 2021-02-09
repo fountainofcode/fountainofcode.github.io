@@ -1,0 +1,322 @@
+:root{
+  --input-gradient-right-color: rgba(98, 124, 161, 0.39);
+  --input-gradient-bottom-color: rgba(127, 81, 141, 0.322);
+  --contactSphere-gradient-right-color: rgba(138, 172, 221, 0.39);
+  --contactSphere-gradient-bottom-color: rgba(127, 81, 141, 0.322);
+  --cardButtonText-color: rgb(51, 49, 49);
+}
+
+
+/* .card-contact { responsive taken
+  background: linear-gradient(to right bottom,
+    var(--card-gradient-right-color),
+    var(--card-gradient-bottom-color)
+  );
+  border-radius: 1rem;
+  margin: 1rem 0rem;
+  padding: 1rem;
+  box-shadow: 6px 6px 20px rgba(122, 122, 122, 0.2); */
+
+  /* display: grid; responsive taken
+  grid-template-columns: 3fr 2fr;
+  grid-gap: 3rem;
+  align-items: center; */
+/* } */
+
+/* Responsive sphere, responsive form */
+/* less than or equal to given pixel */
+@media only screen and (max-width: 1066px) {
+  .card-contact {
+    background: linear-gradient(to right bottom,
+      var(--card-gradient-right-color),
+      var(--card-gradient-bottom-color)
+    );
+    border-radius: 1rem;
+    margin: 3rem 0rem;
+    padding: 1rem;
+    box-shadow: 6px 6px 20px rgba(122, 122, 122, 0.2);
+
+    display: flex;  
+    flex-direction: column;
+    align-items: center;      
+  }  
+
+  form{
+    display: flex;
+    flex-direction: column;
+    
+    width: 17rem;
+  }
+
+}
+
+/* greater than or equal to given pixel */
+@media only screen and (min-width: 1066px) {
+  .card-contact {
+    background: linear-gradient(to right bottom,
+      var(--card-gradient-right-color),
+      var(--card-gradient-bottom-color)
+    );
+    border-radius: 1rem;
+    margin: 1rem 0rem;
+    padding: 1rem;
+    box-shadow: 6px 6px 20px rgba(122, 122, 122, 0.2);
+  
+    display: grid;
+    grid-template-columns: 3fr 2fr;
+    grid-gap: 1rem;
+    align-items: center;
+  
+  }  
+
+  form{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  
+    width: 17rem;
+  }
+}
+
+
+/*Form css*/
+/* form{ responsive taken
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+
+  width: 100%;
+} */
+form h3{
+  margin: 0.4rem 0;
+}
+
+form h3 span{
+  margin-left: 0.2rem;
+  color: var(--h2-color);
+}
+
+form input,
+form textarea {
+  background: linear-gradient(to right bottom,
+    var(--input-gradient-right-color),
+    var(--input-gradient-bottom-color)
+  );
+  border-radius: 1rem;
+  border: none;
+  padding: 8px 9px;
+  width: 100%;
+  box-shadow: 6px 6px 20px rgba(122, 122, 122, 0.2);
+  cursor: auto;
+  outline: none;
+  color: var(--h1-color);
+  font-weight: 550;
+  opacity: 0.8;
+}
+
+form input:-webkit-autofill{
+  box-shadow: 6px 6px 20px rgba(122, 122, 122, 0.2);
+  -webkit-box-shadow: 0 0 0 30px var(--input-gradient-bottom-color) inset !important;
+  -webkit-text-fill-color: var(--h1-color);
+}
+
+/*Submit button*/
+#contact_submit {
+  background: linear-gradient(to right bottom,
+    var(--button-gradient-right-color),
+    var(--button-gradient-bottom-color)
+  );
+  border-radius: 1rem;
+  border: none;
+  padding: 5px 1.75rem;
+  box-shadow: 6px 6px 20px rgba(122, 122, 122, 0.2);
+  cursor: pointer;
+  outline:none;
+
+  align-self: center;
+}
+
+#contact_submit div{
+  display: flex;
+}
+
+#contact_submit span,
+#contact_submit i{
+  color: var(--cardButtonText-color);
+  font-size: 20px;
+  align-self: center;  
+  font-weight: 600;
+  opacity: 0.8;
+}
+
+#contact_submit div span{
+  padding: 0 0.5rem;
+}
+
+#contact_submit:hover i,
+#contact_submit:hover span,
+#contact_submit div:hover i,
+#contact_submit div:hover span
+{
+  color: black;
+}
+
+
+#contact_submit:hover{
+  background: linear-gradient(to right bottom,
+    var(--card-gradient-right-color),
+    var(--card-gradient-bottom-color)
+  );
+}
+
+
+/*Snackbar popup*/
+/* #message_sent, responsive taken
+#message_error {
+  visibility: hidden;
+  background: linear-gradient(to right bottom,
+    var(--main-gradient-right-color),
+    var(--main-gradient-bottom-color)
+  );
+  box-shadow: 6px 6px 20px rgba(122, 122, 122, 0.2);
+  border-radius: 2rem;
+  color: var(--text-color);
+  font-weight: 500;
+  font-size: 17px;
+  
+  margin-left: -170px;
+  text-align: center;
+  padding: 2px 2rem;
+  position: absolute;
+  left: 50%;
+  bottom: 5px;
+  
+  z-index: 3;
+} */
+
+#message_sent.show,
+#message_error.show {
+  visibility: visible;
+}
+
+/* Responsive snackbar */
+/* less than or equal to given pixel 855 */
+@media only screen and (max-width: 1066px) {
+  
+  #message_sent{
+    visibility: hidden;
+    background: linear-gradient(to right bottom,
+      var(--main-gradient-right-color),
+      var(--main-gradient-bottom-color)
+    );
+    box-shadow: 6px 6px 20px rgba(122, 122, 122, 0.2);
+    border-radius: 2rem;
+    color: var(--text-color);
+    font-weight: 500;
+    font-size: 17px;
+    
+    padding: 5px 1.5rem;
+    margin: 0.2rem auto auto;
+    /* margin: -1.2rem auto auto; */
+    width: 68%;
+    text-align: center;
+    z-index: 3;  
+  }
+  #message_error {
+    visibility: hidden;
+    background: linear-gradient(to right bottom,
+      var(--main-gradient-right-color),
+      var(--main-gradient-bottom-color)
+    );
+    box-shadow: 6px 6px 20px rgba(122, 122, 122, 0.2);
+    border-radius: 2rem;
+    color: var(--text-color);
+    font-weight: 500;
+    font-size: 17px;
+    
+    padding: 5px 1.5rem;
+    /* margin: 0.2rem auto auto; */
+    margin: -2.1rem auto auto;
+    width: 68%;
+    text-align: center;
+    z-index: 3;    
+  }
+
+  
+}
+
+/* greater than or equal to given pixel 855 */
+@media only screen and (min-width: 1066px) {
+  #message_sent,
+  #message_error {
+    visibility: hidden;
+    background: linear-gradient(to right bottom,
+      var(--main-gradient-right-color),
+      var(--main-gradient-bottom-color)
+    );
+    box-shadow: 6px 6px 20px rgba(122, 122, 122, 0.2);
+    border-radius: 2rem;
+    color: var(--text-color);
+    font-weight: 500;
+    font-size: 17px;
+    
+    padding: 2px 1.5rem;
+    position: absolute;
+    left: 41.5%;
+    transform: translate(-50%, -50%);
+
+    bottom: -7px;
+    
+    z-index: 3;
+  }  
+}
+
+
+/* Sphere keywords */
+/* .tagcloud { responsive taken
+  color: var(--h1-color);
+  font-weight: 500;
+  font-size: 13px;
+  background: linear-gradient(to right bottom,
+    var(--contactSphere-gradient-right-color),
+    var(--contactSphere-gradient-bottom-color)
+  );
+  border-radius: 50%;
+} */
+
+.tagcloud--item {
+  padding: 2px 4px;
+  cursor: grab;
+  cursor: -moz-grab;
+  cursor: -webkit-grab;
+}
+
+/* Responsive sphere */
+/* less than or equal to given pixel */
+@media only screen and (max-width: 446px) {
+  .tagcloud {
+    color: var(--h1-color);
+    font-weight: 500;
+    font-size: 13px;
+    background: linear-gradient(to right bottom,
+      var(--contactSphere-gradient-right-color),
+      var(--contactSphere-gradient-bottom-color)
+    );
+    border-radius: 50%;
+  }
+  
+}
+
+/* greater than or equal to given pixel */
+@media only screen and (min-width: 446px) {
+  .tagcloud {
+    color: var(--h1-color);
+    font-weight: 500;
+    font-size: 13px;
+    background: linear-gradient(to right bottom,
+      var(--contactSphere-gradient-right-color),
+      var(--contactSphere-gradient-bottom-color)
+    );
+    border-radius: 50%;
+  }
+}

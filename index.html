@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Krishna Pantha</title>
+
+  <!-- Vuejs CDN -->
+  <script src="https://cdn.jsdelivr.net/npm/vue@3.0.2"></script>
+  <!-- <script src="https://cdn.jsdelivr.net/npm/vue@2.6.12/dist/vue.js"></script> -->
+
+  <!-- Sphere -->
+  <script src="./sphere/TagCloud.min.js"></script>
+
+  <!-- Google font -->
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;700&display=swap" rel="stylesheet">
+
+  <!-- Add icon library -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+  <link rel="stylesheet" href="./css/styles.css">
+
+</head>
+
+<body>
+  <div id="app">
+    <main>
+      <section class="glass">
+        <div class="dashboard">
+          <div class="user">
+            <img src="./images/krishna.jpg" alt="username">
+            <h3>Krishna Pantha</h3>
+            <p>Developer</p>
+          </div>
+
+          <!-- Reset contact form while clicking any links -->
+          <div class="links" @click="resetForm">
+            <div v-for="links in links" @click="linkTitle = links.title; sphereHide = true;" :key="links.id">
+              <div class="link" >
+                <i :class="links.iconClass" aria-hidden="true"></i>
+
+                <!-- -- align all links, with an extra space -- -->
+                <h2 v-if="links.title === 'Education'">{{ links.title }}</h2>
+                <h2 v-else>&nbsp;{{ links.title }}</h2>
+              </div>
+            </div>
+
+            <!-- Making 'Contact' separately to make 'sphere' while clicking the link -->
+            <div v-if="sphereHide === true" @click="sphere" class='contactlink'>
+              <div class="link" @click="linkTitle = 'Contact'">
+                <i class="fa fa-envelope fa-lg" aria-hidden="true"></i>
+                <h2>&nbsp;Contact</h2>
+              </div>
+            </div>
+            <div v-else="sphereHide === false" class='contactlink'>
+              <div class="link" @click="linkTitle = 'Contact'">
+                <i class="fa fa-envelope fa-lg" aria-hidden="true"></i>
+                <h2>&nbsp;Contact</h2>
+              </div>
+            </div>
+          </div>
+
+          <div class="languages">
+            <div class="language-list">
+              <p>Some Danish</p>
+              <p>English</p>
+              <p>Nepalese</p>
+            </div>
+
+            <img src="./images/language-pic.jpg" alt="language-pic">
+          </div>
+
+        </div>
+
+        <div class="contents">
+          <div class="heading">
+            <h1>{{ linkTitle }}</h1>
+          </div>
+
+          <div class="cards">
+
+            <div class="card" v-if="linkTitle === 'Skills'" v-for="skill in skills" :key="skills.id">
+              <img :src="skill.cardImage" :alt="skill.cardHeader" class="cardimage">
+              <div class="card-info">
+                <h2>{{skill.cardHeader}}</h2>
+                <ul>
+                  <li v-for="contents in skill.contentList">
+                    <p>{{contents.cardContent}}</p>
+                  </li>
+                </ul>
+              </div>
+            </div>
+
+
+            <div class="card" v-if="linkTitle === 'Projects'" v-for="project in filteredItems" :key="projects.id">
+              <img :src="project.cardImage" :alt="project.cardHeader" class="cardimage">
+              <div class="card-info">
+                <h2>{{project.cardHeader}}</h2>
+                <h4>{{project.cardSubHeader}}</h4>
+                <ul>
+                  <li v-for="contents in project.contentList">
+                    <p>{{contents.cardContent}}</p>
+                  </li>
+                </ul>
+              </div>
+            </div>
+
+            <div class="card" v-if="linkTitle === 'Jobs'" v-for="job in filteredItems" :key="jobs.id">
+              <img :src="job.cardImage" :alt="job.cardHeader" class="cardimage">
+              <div class="card-info">
+                <h2>{{job.cardHeader}}</h2>
+                <h4>{{job.cardSubHeader}}</h4>
+                <ul>
+                  <li v-for="contents in job.contentList">
+                    <p>{{contents.cardContent}}</p>
+                  </li>
+                </ul>
+              </div>
+            </div>
+
+            <div class="card" v-if="linkTitle === 'Education'" v-for="education in educations" :key="educations.id">
+              <img :src="education.cardImage" :alt="education.cardHeader" class="cardimage">
+              <div class="card-info">
+                <h2>{{education.cardHeader}}</h2>
+                <h4>{{education.cardSubHeader}}</h4>
+                <ul>
+                  <li v-for="contents in education.contentList">
+                    <p>{{contents.cardContent}}</p>
+                  </li>
+                </ul>
+              </div>
+            </div>
+
+            <div class="card-contact" v-if="linkTitle === 'Contact'">
+
+              <form id='contactFormId' ref='contactForm' @submit.prevent="submitForm">
+                <!-- <form ref='contactForm' @submit.prevent="submitForm" autocomplete="off"> -->
+                <div>
+                  <h3>
+                    <span>Name</span><br>
+                    <input id="contact_name" type="text" v-model="name" name="name" required>
+                  </h3>
+                  <br>
+                  <h3>
+                    <span>Your email</span><br>
+                    <input id="contact_email" type="email" v-model="email" name="email" required>
+                  </h3>
+                  <br>
+                  <h3>
+                    <span>Subject</span><br>
+                    <input id="contact_subject" type="text" v-model="subject" name="subject">
+                  </h3>
+                  <br>
+                  <h3>
+                    <span>Message</span><br>
+                    <textarea id="contact_message" v-model="message" name="message" required></textarea>
+                  </h3>
+                </div>
+
+                <button id="contact_submit">
+                  <div>
+                    <i class="fa fa-paper-plane-o" aria-hidden="true" id="contact_send_icon"></i>
+                    <span id="contact_send_text">Send</span>
+                  </div>
+                  
+                </button>
+                <div>
+                  <div id="message_sent">
+                    <p>Message sent!</p>
+                  </div>
+                  <div id="message_error">
+                    <p>Technical Error!
+                    </p>
+                  </div>
+                </div>
+              </form>
+
+              <!-- sphere -->
+              <div id="keywords"></div>
+            </div>
+
+            <div class="buttonsAtlast">
+              <div @click="backItems" v-show="linkTitle === 'Projects' || linkTitle === 'Jobs'">
+                <button class="back-button">
+                  <h2>
+                    <i class="fa fa-hand-o-up" aria-hidden="true"></i>
+                    Back
+                  </h2>
+                </button>
+              </div>
+
+              <div @click="moreItems" v-show="linkTitle === 'Projects' || linkTitle === 'Jobs'">
+                <button class="more-button">
+                  <h2>
+                    <i class="fa fa-hand-o-down" aria-hidden="true"></i>
+                    Next
+                  </h2>
+                </button>
+              </div>
+            </div>
+
+          </div>
+        </div>
+
+      </section>
+    </main>
+
+    <!-- Toast message notification for the contact sent -->
+    <!-- <div id="message_sent">
+      <p>Message sent!</p>
+    </div>
+    <div id="message_error">
+      <p>Technical Error. Please message me in my regular email address!
+      </p>
+    </div> -->
+
+
+
+    <!-- 2 circles for design -->
+    <div class="circles">
+      <div class="circle1"></div>
+      <div class="circle2"></div>
+    </div>
+
+  </div>
+
+  <script src="app.js"></script>
+
+</body>
+
+</html>

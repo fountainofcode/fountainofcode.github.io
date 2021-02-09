@@ -1,0 +1,429 @@
+/* Devices less 281px, responsive not handled */
+
+/* Zoom to make it look better, in very very small devices */
+/* less than or equal to given pixel */
+@media only screen and (max-width: 380px){
+  /* .contents,
+  .dashboard{
+    zoom: 100%;
+  }   */
+}
+
+
+/* Show only icons on links (Very small mobile view) */
+/* less than or equal to given pixel */
+@media only screen and (max-width: 469px) {
+  
+  .glass{    
+    min-height: 100vh;    
+  }
+
+  .dashboard{
+    display: flex;
+    height: 6.3rem;
+  }
+
+  .user img{
+    margin: 7px 0 0 10px;
+  }
+  .user h3{
+    margin: -5px 0 0 9px;
+    font-size: 13px;
+    text-transform: uppercase;
+    color: var(--h2-color);
+  }
+  .user p{
+    display: none;
+    overflow: hidden;
+  }
+ 
+  .links{
+    display: grid;
+    grid-template-columns: 2rem 2rem 2rem 2rem 2rem;
+    gap: 1.1rem;
+    justify-content: stretch;
+    align-content: stretch;    
+  }
+
+  .links .link{
+    margin: 34px 0 0 1.5rem;
+  }
+  
+  .links .link i{
+    visibility: visible;
+  }
+  .links .link i:hover{
+    color: black;
+  }
+  .links .link h2{
+     display: none;
+     overflow: hidden;
+  }
+  
+  .languages {
+    display: none;  
+    visibility: hidden; 
+    overflow: hidden;     
+  }
+
+  .contents{
+    margin: 1rem 2rem 0 2rem;
+  }
+
+  .more-button, .back-button{
+    margin: 5px 0 15px 0;
+  }
+
+  .card-contact{
+    zoom: 80%;
+  }
+  #keywords{
+    zoom: 80%;
+  }
+}
+
+
+/* Show only icons on links (Mobile view) */
+/* within specific range (469 to 649) */
+@media only screen and (max-width: 649px) 
+and (min-width: 469px) {
+  .glass{    
+    min-height: 100vh;
+    min-width: 96%;
+  }
+
+  .dashboard{
+    display: flex;
+    height: 6.3rem;
+  }
+
+  .user img{
+    margin: .5rem 0 0 15px;    
+  }
+  .user h3{
+    margin: -5px 0 0 14px;
+    font-size: 13px;
+    text-transform: uppercase;
+    color: var(--h2-color);
+  }
+  .user p{
+    display: none;
+    overflow: hidden;
+  }
+  
+  .links{
+    display: grid;
+    grid-template-columns: 2rem 2rem 2rem 2rem 2rem;
+    gap: 3.0rem;
+  }
+
+  .links .link{
+    margin: 34px 0 0 2rem;
+  }
+
+  .links .link i{
+    visibility: visible;
+  }
+  .links .link i:hover{
+    color: black;
+  }
+  .links .link h2{
+     display: none;     
+  }
+  
+  .languages {
+    display: none;
+    visibility: hidden;
+    overflow: hidden;
+  }
+
+  .contents{
+    margin: 1rem 2rem 0 2rem;
+  }
+
+  .more-button, .back-button{
+    margin: 5px 0 15px 0;
+  }
+}
+
+
+/* Decrease link font */
+/* within specific range (649 to 795) */
+@media only screen and (max-width: 795px)
+and (min-width: 649px) {
+  .glass{ 
+    min-height: 100vh;
+  }
+
+  .dashboard{
+    display: flex;
+    justify-content: space-between;
+    height: 6.3rem;
+  }
+
+  .user img{
+    margin: 7px 0 0 2.3rem;
+  }
+  .user h3{
+    margin: -5px 0 0 9px;
+    font-size: 12px;
+    text-transform: uppercase;
+    color: var(--h2-color);
+  }
+  .user p{
+    margin: -5px 0 0 1.3rem;
+    visibility: visible;
+  }
+
+  .link{
+    padding: 1rem 0 1rem 1.0rem;
+  }
+  
+  .links{
+    display: flex;
+    justify-content: space-between;
+  }
+  .links .contactlink{
+    position: absolute;
+    right: 8px;
+    flex-grow: 1;
+  }
+
+  .links .link i{
+    visibility: hidden;
+    display: none;
+  }
+  .links .link h2{
+    color: var(--responsive-link-color);
+    font-size: 19px;    
+  }
+  .links .link h2:hover{
+    color: black;
+    
+  }
+
+  .languages {
+    display: none;  
+    visibility: hidden; 
+    overflow: hidden; 
+  }
+
+  .contents{
+    margin: 1rem 2rem 0 2rem;
+  }
+
+  .more-button, .back-button{
+    margin: 5px 0 15px 0;
+  }  
+
+}
+
+/* Adjust User position */
+/* within specific range (649 to 690) */
+@media only screen and (max-width: 690px)
+and (min-width: 649px) {
+  .user img{
+    margin: .5rem 0 0 10px;    
+  }
+  .user h3{
+    margin: -5px 0 0 9px;
+    font-size: 12px;
+    text-transform: uppercase;
+    color: var(--h2-color);
+  }
+  .user p{
+    display: none;
+  }
+}
+
+
+/* Dashboard on top */
+/* within specific range (796 to 855) */
+/* @media only screen and (max-width: 855px) */
+@media only screen and (max-width: 1066px)
+and (min-width: 796px) {
+
+  .glass{ 
+    min-height: 100vh;
+  }
+
+  .dashboard{
+    display: flex;
+    height: 6.3rem;
+  }
+
+  .user img{
+    margin: 7px 0 0 2.3rem;
+  }
+  .user h3{
+    margin: -5px 0 0 9px;
+    font-size: 12px;
+    text-transform: uppercase;
+    color: var(--h2-color);
+  }
+  .user p{
+    margin: -5px 0 0 1.3rem;
+
+  }
+
+  .link{
+    padding: 1rem 0 1rem 1rem;
+  }
+  
+  .links{
+    margin: 0;
+    display: flex;
+    flex-wrap: wrap;
+    align-content: stretch;
+  }
+  .links .link{
+    display: flex;
+    margin-right: -35px;
+  }
+  .links .contactlink{
+    position: absolute;
+    right: 2.8rem;
+  }
+
+  .links .link i{
+    visibility: hidden;
+  }
+  .links .link h2{
+    color: var(--responsive-link-color);
+  }
+  .links .link h2:hover{
+    color: black;
+  }
+
+  .languages {
+    visibility: hidden;
+  }
+
+  .contents{
+    margin: 1rem 2rem 0 2rem;
+  }
+
+  .more-button, .back-button{
+    margin: 5px 0 15px 0;
+  }
+}
+
+/* greater than or equal to given pixel */
+@media only screen and (min-width: 1066px) {
+  .glass{
+    min-height: 90vh;
+    /* height: 90vh; */
+
+    display: grid;
+    grid-template-columns: 1fr 3fr;
+    border-radius: 2rem;
+  }
+  .dashboard{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+    text-align: center;
+    border-radius: 2rem;
+  }
+  
+  .user img{
+    margin: 1rem 0 0;
+  }
+
+  .link{
+    display: flex;
+    padding: 1rem 0 1rem 1rem;
+  }
+  .link h2{
+    padding: 0rem 1rem;
+  }
+
+  .languages{
+    background: linear-gradient(to right bottom,
+      var(--main-gradient-right-color),
+      var(--main-gradient-bottom-color)
+    );
+    padding: 1rem;
+    margin: 1rem 1rem;
+  }
+
+  .contents{
+    margin: 2rem;
+  }
+
+}
+
+/* Remove circles */
+/* less than or equal to given pixel */
+@media only screen and (max-width: 1204px){
+  .glass{
+    width: 91%;
+  }
+  .circle1, .circle2{
+    visibility: hidden;
+  }
+}
+
+/* greater than or equal to given pixel */
+@media only screen and (min-width: 1204px){
+  .glass{
+    width: 91%;
+  }
+  .circle1, .circle2{
+    visibility: visible;
+  }
+}
+
+/* Hide it height wise also*/
+/* less than or equal to given pixel */
+/* @media only screen and (max-height: 698px){ */
+@media only screen and (max-height: 635px){
+  .circle1, .circle2{
+    visibility: hidden;
+  }
+}
+
+
+/* Zoom to make it look better */
+/* less than or equal to given pixel */
+@media only screen and (max-height: 769px){
+  .glass,
+  .circle1,
+  .circle2{
+    zoom: 90%;
+  }  
+}
+
+
+/* Full view */
+/* greater than or equal to given pixel */
+@media only screen and (min-width: 1255px){
+  .glass{
+    width: 85%;
+  }
+}
+
+/* Full view */
+/* greater than or equal to given pixel */
+@media only screen and (min-width: 1335px){
+  .glass{
+    width: 80%;
+  }
+}
+
+/* Full view */
+/* greater than or equal to given pixel */
+@media only screen and (min-width: 1421px){
+  .glass{
+    width: 75%;
+  }
+}
+
+/* Full view */
+/* greater than or equal to given pixel */
+@media only screen and (min-width: 1525px){
+  .glass{
+    width: 70%;
+  }
+}

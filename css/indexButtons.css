@@ -1,0 +1,77 @@
+/*more button*/
+.more-button {
+  background: linear-gradient(to right bottom,
+    var(--button-gradient-right-color),
+    var(--button-gradient-bottom-color)
+  );
+  border-radius: 1rem;
+  border: none;
+  margin: -5px 0; /*responsive used*/
+  padding: 5px 2rem;
+  box-shadow: 6px 6px 20px rgba(122, 122, 122, 0.2);
+  cursor: pointer;
+  outline:none;
+}
+
+.more-button h2{
+  color: var(--h2-card-color);
+}
+
+.more-button h2:hover,
+.more-button:hover h2{
+  color: black;  
+}
+
+.more-button:hover{
+  background: linear-gradient(to right bottom,
+    var(--card-gradient-right-color),
+    var(--card-gradient-bottom-color)
+  );
+}
+
+.more-button:active{
+  background: linear-gradient(to right bottom,
+    var(--button-gradient-right-color),
+    var(--button-gradient-bottom-color)
+  );
+}
+
+
+/*back button*/
+.back-button{
+  background: linear-gradient(to right bottom,
+    var(--button-gradient-right-color),
+    var(--button-gradient-bottom-color)
+  );
+  border-radius: 1rem;
+  border: none;
+  margin: -5px 0; /*responsive used*/
+  padding: 5px 2rem;
+  box-shadow: 6px 6px 20px rgba(122, 122, 122, 0.3);
+  cursor: pointer;
+  outline:none;
+}
+
+.back-button h2{
+  color: var(--h2-card-color);
+}
+
+.back-button h2:hover,
+.back-button:hover h2{
+  color: black;  
+}
+
+.back-button:hover{
+  background: linear-gradient(to right bottom,
+    var(--card-gradient-right-color),
+    var(--card-gradient-bottom-color)
+  );
+}
+
+.back-button:active{
+  background: linear-gradient(to right bottom,
+    var(--button-gradient-right-color),
+    var(--button-gradient-bottom-color)
+  );
+}
+
