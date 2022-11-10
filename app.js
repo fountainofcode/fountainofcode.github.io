@@ -27,6 +27,7 @@ const app = Vue.createApp({
             { cardContent: 'Java: Spring Boot, WebFlux, Microservices, Kafka, JUnit, Mockito.' },
             { cardContent: '.Net: ASP.Net Core, Web API, WPF.' },
             { cardContent: 'Python: Flask, Django, DRF.' },
+            { cardContent: 'Cloud: AWS Lambda, Alexa Console.' },
           ], id: 2
         },
         {
@@ -40,6 +41,7 @@ const app = Vue.createApp({
           cardImage: './images/otherprog-pic.jpg',
           cardHeader: 'Others',
           contentList: [
+            { cardContent: 'Adobe Classical Campaign, AEP.' },
             { cardContent: 'Android app development.' },
             { cardContent: 'PostgreSQL, MySQL, SQL Server, MongoDB, Cassandra.' },
             { cardContent: 'Pandas, Matplotlib.' },
@@ -150,12 +152,21 @@ const app = Vue.createApp({
       jobs: [
         {
           cardImage: './images/wired-pic.jpg',
+          cardHeader: 'Associate Developer, 2021 - Present',
+          cardSubHeader: 'Wunderman Thompson, Copenhagen, Denmark',
+          contentList: [
+            { cardContent: '- JavaScript, Adobe Classical Campaign, SQL, AWS Lambda, Node.js, Alexa Console, AEP, XML, Mustache, C#.Net, Bitbucket.'},
+            { cardContent: 'Developing, configuring, maintaining, testing and monitoring in ACC; REST API on AWS Alexa Console with AEP; Maintaining .Net Code to back up Adobe log' },
+          ], id: 1
+        },
+        {
+          cardImage: './images/wired-pic.jpg',
           cardHeader: 'Fullstack Developer, 2020',
           cardSubHeader: 'Wired Relations, Copenhagen, Denmark',
           contentList: [
             { cardContent: '- JavaScript, Nodejs, React, Java, Spring Boot, Kafka, JUnit, Mockito, Usergrid, Jenkins, Docker, Git.' },
             { cardContent: 'Designing, Refactoring, Testing, Making the api implement CQRS architecture' },
-          ], id: 1
+          ], id: 2
         },
         {
           cardImage: './images/freelancer-pic.jpg',
@@ -165,7 +176,7 @@ const app = Vue.createApp({
             { cardContent: '- ASP.Net Core, Python, Android.' },
             { cardContent: 'Website development, Data Visualization, Mobile app development' },
 
-          ], id: 2
+          ], id: 3
         },
         {
           cardImage: './images/yantra-pic.jpg',
@@ -174,7 +185,7 @@ const app = Vue.createApp({
           contentList: [
             { cardContent: '- Java, C#, ASP.Net, PHP.' },
             { cardContent: 'Web- and desktop- database application development' },
-          ], id: 3
+          ], id: 4
         },
         {
           cardImage: './images/deerwalk-pic.jpg',
@@ -183,7 +194,7 @@ const app = Vue.createApp({
           contentList: [
             { cardContent: '- Hadoop, Python, Amazon web server.' },
             { cardContent: 'Big Data processing, monitoring and storing in secure place, working in production environment' },
-          ], id: 4
+          ], id: 5
         },
         {
           cardImage: './images/iims-pic.jpg',
@@ -191,7 +202,7 @@ const app = Vue.createApp({
           cardSubHeader: 'International Institute of Management Science, Dhobidhara, Kathmandu, Nepal',
           contentList: [
             { cardContent: '- DBMS, Software Project Management, Enterprise Resource Planning.' },
-          ], id: 5
+          ], id: 6
         },
         {
           cardImage: './images/iid-pic.jpg',
@@ -200,7 +211,7 @@ const app = Vue.createApp({
           contentList: [
             { cardContent: '- Red Hat Linux.' },
             { cardContent: 'Administration and Server Configuration' },
-          ], id: 6
+          ], id: 7
         },
       ],
 
