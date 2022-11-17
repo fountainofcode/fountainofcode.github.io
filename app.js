@@ -151,7 +151,7 @@ const app = Vue.createApp({
 
       jobs: [
         {
-          cardImage: './images/wired-pic.jpg',
+          cardImage: './images/wunderman-pic.jpg',
           cardHeader: 'Associate Developer, 2021 - Present',
           cardSubHeader: 'Wunderman Thompson, Copenhagen, Denmark',
           contentList: [
