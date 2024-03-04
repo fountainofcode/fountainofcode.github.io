@@ -4,7 +4,7 @@ const app = Vue.createApp({
     return {
       links: [
         { iconClass: 'fa fa-cogs fa-lg', title: 'Skills', id: 1 },
-        { iconClass: 'fa fa-tasks fa-lg', title: 'Projects', id: 2 },
+        // { iconClass: 'fa fa-tasks fa-lg', title: 'Projects', id: 2 },
         { iconClass: 'fa fa-briefcase fa-lg', title: 'Jobs', id: 3 },
         { iconClass: 'fa fa-graduation-cap fa-lg', title: 'Education', id: 4 },
         // { iconClass: 'fa fa-envelope fa-lg', title: 'Contact', id: 5 },
@@ -13,39 +13,35 @@ const app = Vue.createApp({
 
       skills: [
         {
-          cardImage: './images/frontend-pic.jpg',
-          cardHeader: 'Frontend Development',
+          cardImage: './images/cloud-data-engineering.jpg',
+          cardHeader: 'Cloud Data Engineering',
           contentList: [
-            { cardContent: 'Reactjs, Redux, Thunk, CSS, SASS, Bootstrap, MaterialCSS, jQuery, Vuejs.' },
+            { cardContent: 'AWS: Lambda, Gluejobs, Step Functions, Athena, Elastic Container Service.' },
+            { cardContent: 'GCP: gcloud, Cloud Function, BigQuery, Dataflow, Pub/Sub, Cloud Run, BQML.' }
           ], id: 1
         },
         {
-          cardImage: './images/backend-pic.jpg',
-          cardHeader: 'Backend Development',
+          cardImage: './images/web-development.jpg',
+          cardHeader: 'Web Development',
           contentList: [
-            { cardContent: 'JavaScript: NodeJS, Jest, Express, EJS, Express-GraphQL, Apollo Server/Client.' },
-            { cardContent: 'Java: Spring Boot, WebFlux, Microservices, Kafka, JUnit, Mockito.' },
-            { cardContent: '.Net: ASP.Net Core, Web API, WPF.' },
-            { cardContent: 'Python: Flask, Django, DRF.' },
-            { cardContent: 'Cloud: AWS Lambda, Alexa Console.' },
+            { cardContent: 'JavaScript, JQuery, HTML, CSS, Bootstrap.' },
+            { cardContent: 'Nodejs, Express, Mustache, EJS.' },
+            { cardContent: 'Python, Flask, Jinja.' },
           ], id: 2
         },
         {
-          cardImage: './images/devops-pic.jpg',
-          cardHeader: 'DevOps',
+          cardImage: './images/data-processing.jpg',
+          cardHeader: 'Data Processing',
           contentList: [
-            { cardContent: 'Linux, Docker, Kubernetes, Nginx, Jenkins, Git.' },
+            { cardContent: 'SQL, DBT, Snowflake, Pandas, PySpark.' },
           ], id: 3
         },
         {
-          cardImage: './images/otherprog-pic.jpg',
+          cardImage: './images/devops-pic.jpg',
           cardHeader: 'Others',
           contentList: [
-            { cardContent: 'Adobe Classical Campaign, AEP.' },
-            { cardContent: 'Android app development.' },
-            { cardContent: 'PostgreSQL, MySQL, SQL Server, MongoDB, Cassandra.' },
-            { cardContent: 'Pandas, Matplotlib.' },
-            { cardContent: 'JavaScript, Java, C#, Python, C++, C.' },
+            { cardContent: 'DevOps: Linux, Shell scripting, Docker, Git, Terraform.' },
+            { cardContent: 'ML: Machine Learning concepts, Scikit.' },
           ], id: 4
         },
       ],
@@ -151,13 +147,24 @@ const app = Vue.createApp({
 
       jobs: [
         {
+          cardImage: './images/vml-pic.jpg',
+          cardHeader: 'Data Engineer | Cloud Engineer, 2022 - Present',
+          cardSubHeader: 'Wunderman Thompson, Copenhagen, Denmark',
+          contentList: [
+            { cardContent: '- AWS / GCP data engineering services, Python, Flask, DBT, Jinja, PySpark, SQL, Docker, Linux, Shell, GitHub.'},
+            { cardContent: 'Creating Data Integration Pipeline: To provide data for Data Scientists or Data Analysts.' },
+            { cardContent: 'Making Data Warehouse: Extraction, Transform, Load for Batch data.' },
+            { cardContent: 'Developing Cloud Solutions: Designing and building systems for collecting, storing, and analyzing data at scale' },
+          ], id: 1
+        },
+        {
           cardImage: './images/wunderman-pic.jpg',
-          cardHeader: 'Associate Developer, 2021 - Present',
+          cardHeader: 'Software Developer, 2021',
           cardSubHeader: 'Wunderman Thompson, Copenhagen, Denmark',
           contentList: [
             { cardContent: '- JavaScript, Adobe Classical Campaign, SQL, AWS Lambda, Node.js, Alexa Console, AEP, XML, Mustache, C#.Net, Bitbucket.'},
-            { cardContent: 'Developing, configuring, maintaining, testing and monitoring in ACC; REST API on AWS Alexa Console with AEP; Maintaining .Net Code to back up Adobe log' },
-          ], id: 1
+            { cardContent: 'Implementing Voice Recognition project with AWS Alexa Console, Node.js and AEP; Maintaining .Net Code to back up Adobe log; Contributing to in-house briefing product' },
+          ], id: 2
         },
         {
           cardImage: './images/wired-pic.jpg',
@@ -166,7 +173,7 @@ const app = Vue.createApp({
           contentList: [
             { cardContent: '- JavaScript, Nodejs, React, Java, Spring Boot, Kafka, JUnit, Mockito, Usergrid, Jenkins, Docker, Git.' },
             { cardContent: 'Designing, Refactoring, Testing, Making the api implement CQRS architecture' },
-          ], id: 2
+          ], id: 3
         },
         {
           cardImage: './images/freelancer-pic.jpg',
@@ -176,16 +183,15 @@ const app = Vue.createApp({
             { cardContent: '- ASP.Net Core, Python, Android.' },
             { cardContent: 'Website development, Data Visualization, Mobile app development' },
 
-          ], id: 3
+          ], id: 4
         },
         {
-          cardImage: './images/yantra-pic.jpg',
-          cardHeader: 'Junior Engineer, 2013, 2014',
-          cardSubHeader: 'Yantra Solution Pvt. Ltd., Kathmandu, Nepal',
+          cardImage: './images/iims-pic.jpg',
+          cardHeader: 'Lecturer, Bachelor level, IT Department, 2016',
+          cardSubHeader: 'International Institute of Management Science, Dhobidhara, Kathmandu, Nepal',
           contentList: [
-            { cardContent: '- Java, C#, ASP.Net, PHP.' },
-            { cardContent: 'Web- and desktop- database application development' },
-          ], id: 4
+            { cardContent: '- DBMS, Software Project Management, Enterprise Resource Planning.' },
+          ], id: 5
         },
         {
           cardImage: './images/deerwalk-pic.jpg',
@@ -194,15 +200,16 @@ const app = Vue.createApp({
           contentList: [
             { cardContent: '- Hadoop, Python, Amazon web server.' },
             { cardContent: 'Big Data processing, monitoring and storing in secure place, working in production environment' },
-          ], id: 5
+          ], id: 6
         },
         {
-          cardImage: './images/iims-pic.jpg',
-          cardHeader: 'Lecturer, Bachelor level, IT Department, 2016',
-          cardSubHeader: 'International Institute of Management Science, Dhobidhara, Kathmandu, Nepal',
+          cardImage: './images/yantra-pic.jpg',
+          cardHeader: 'Junior Engineer, 2013, 2014',
+          cardSubHeader: 'Yantra Solution Pvt. Ltd., Kathmandu, Nepal',
           contentList: [
-            { cardContent: '- DBMS, Software Project Management, Enterprise Resource Planning.' },
-          ], id: 6
+            { cardContent: '- Java, C#, ASP.Net, PHP.' },
+            { cardContent: 'Web- and desktop- database application development' },
+          ], id: 7
         },
         {
           cardImage: './images/iid-pic.jpg',
@@ -211,14 +218,14 @@ const app = Vue.createApp({
           contentList: [
             { cardContent: '- Red Hat Linux.' },
             { cardContent: 'Administration and Server Configuration' },
-          ], id: 7
+          ], id: 8
         },
       ],
 
       educations: [
         {
           cardImage: './images/master-pic.jpg',
-          cardHeader: 'Master of Science in Information Technology, 2015',
+          cardHeader: 'Master of Science in Information Technology',
           cardSubHeader: 'Sikkim Manipal University, India',
           contentList: [
             { cardContent: 'Percentage: 78% (Semester scholarships) ' },
@@ -247,15 +254,17 @@ const app = Vue.createApp({
 
       // Tags for sphere
       myTags: [
-        'JavaScript', 'NodeJS', 'Express', 'EJS', 'GraphQL',
-        'ReactJS', 'Hooks', 'Redux', 'Thunk', 'Apollo-Client', 'VueJS',
-        'Java', 'Spring Boot', 'WebFlux', 'Kafka', 'Microservices', 'JUnit', 'Mockito', 'Android App', 'Swift',
-        'C#', 'WPF', 'Web Form', 'ASP.Net Core', 'Web API', 'MSSQL',
-        'Python', 'Flask', 'Django', 'DRF', 'Pandas', 'Matplotlib', 'Matlab',
-        'C++', 'C', 'PHP',
-        'HTML', 'CSS', 'SASS', 'Bootstrap', 'MaterialCSS', 'AJAX', 'jQuery',
-        'Linux', 'Docker', 'Kubernetes', 'Nginx', 'Jenkins',
-        'Cassandra', 'MongoDB', 'PostgreSQL', 'MySQL', 'SQLite'
+        'Cloud Engineer', 'Data Engineer', 'Software Engineer', 'Web Developer',
+        'AWS', 'GCP',
+        'Lambda', 'Gluejobs', 'Step Functions', 'Athena', 'Elastic Container Service',
+        'gcloud', 'Cloud Function', 'BigQuery', 'Dataflow', 'Pub/Sub', 'Cloud Run', 'BQML',
+        'JavaScript', 'JQuery', 'HTML', 'CSS', 'Bootstrap',
+        'Nodejs', 'Express', 'Mustache', 'EJS',
+        'Python', 'Flask', 'Jinja',
+        'DevOps', 'Linux', 'Shell scripting', 'Docker', 'Git', 'Terraform',
+        'Data Processing', 'SQL', 'DBT', 'Snowflake', 'Pandas', 'PySpark',
+        'ML', 'Scikit',
+        'Python', 'JavaScript'
       ],
       sphereHide: true,
     }
