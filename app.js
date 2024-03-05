@@ -290,7 +290,7 @@ const app = Vue.createApp({
         message: this.message
       }
 
-      fetch('https://formspree.io/f/mqkgnldw', {
+      fetch('https://formspree.io/f/mpzvlzdj', {
         method: 'POST',
         headers: { 'Content-type': 'application/json' },
         body: JSON.stringify(data)
